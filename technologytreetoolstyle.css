@@ -1,0 +1,232 @@
+/*
+Theme Name: TechnologyTreeToolTheme
+Theme URI: http://tomasz.ceranek.pl/technology-tree-tool-for-the-third-edition-of-twilight-imperium/
+Author: tomaszceranek+website_gmail.com
+Author URI: http://tomasz.ceranek.pl
+Description: This is subpage theme for my website: http://tomasz.ceranek.pl/technology-tree-tool-for-the-third-edition-of-twilight-imperium/
+Version from 08/03/2019
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(20, 30, 40);
+  color: rgb(212, 212, 212);
+  font-size: 14px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+
+#page-title {
+  background: -webkit-linear-gradient(rgba(250, 50, 50, 0.7), rgba(250, 215, 50, 0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+}
+
+#page-subtitle {
+  color: rgba(235, 235, 255, 0.6);
+  font-weight: 300;
+}
+
+.card-board {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-of-cards {
+  display: flex;
+}
+
+.steps {
+  display: flex;
+  font-weight: 300;
+  width: 4.5em;
+  text-align: center;
+  color: rgba(235, 235, 255, 0.4);
+}
+
+.steps-number {
+  font-weight: 600;
+  color: rgba(250, 130, 50, 0.4);
+}
+
+.card {
+  background-color: rgba(30, 50, 70, 0.5);
+  box-shadow: 0 0 30px 0 rgba(0,0,0,.5);
+  transition: box-shadow .2s ease-out;
+  width: 14em;
+  height: 21em;
+  margin: 0 0.5em 1.5em 0;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 0 30px 5px rgba(30, 50, 70, 0.5);
+}
+
+.card-title {
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.card p {
+  color: rgba(235, 235, 255, 0.6);
+  font-size: 0.9em;
+}
+
+.red::before, .blue::before, .green::before, .yellow::before {
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  display: block;
+  content: ' ';
+  margin: 0 auto 15px auto;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.red::before {
+    background-color: rgba(250, 50, 50, 0.4);
+    border: rgba(250, 50, 50, 0.5) solid 1.5px;
+}
+
+.blue::before {
+    background-color: rgba(50, 130, 250, 0.4);
+    border: rgba(50, 130, 250, 0.5) solid 1.5px;
+}
+
+.green::before {
+    background-color: rgba(50, 250, 90, 0.4);
+    border: rgba(50, 250, 90, 0.5) solid 1.5px;
+}
+
+.yellow::before {
+    background-color: rgba(250, 200, 50, 0.4);
+    border: rgba(250, 200, 50, 0.5) solid 1.5px;
+}
+
+.card:hover .red::before {
+  box-shadow: 0 0 30px 5px rgba(250, 50, 50, 0.5);
+  background-color: rgba(250, 50, 50, 0.6);
+}
+
+.card:hover .blue::before {
+  box-shadow: 0 0 30px 5px rgba(50, 130, 250, 0.5);
+  background-color: rgba(50, 130, 250, 0.6);
+}
+
+.card:hover .green::before {
+  box-shadow: 0 0 30px 5px rgba(50, 250, 90, 0.5);
+  background-color: rgba(50, 250, 90, 0.6);
+}
+
+.card:hover .yellow::before {
+  box-shadow: 0 0 30px 5px rgba(250, 200, 50, 0.5);
+  background-color: rgba(250, 200, 50, 0.6);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header {
+    margin: 1.5em;
+    text-align: center;
+  }
+
+  #page-title {
+    font-size: 2em;
+  }
+
+  #page-subtitle {
+    line-height: 1.38em;
+    font-size: 0.88em;
+  }
+
+  .card-board, section {
+    padding: 1.5em;
+  }
+
+  .row-of-cards {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5em;
+  }
+
+  .steps {
+    margin-bottom: 1em;
+    flex-direction: row;
+    font-size: 1.3em;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+
+  .steps-number {
+    font-size: 2em;
+  }
+
+  .card:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  header {
+    margin: 2em;
+  }
+
+  #page-title {
+    font-size: 3.5em;
+  }
+
+  #page-subtitle {
+    line-height: 1.73em;
+    font-size: 1.53em;
+  }
+
+  .card-board, section {
+    padding: 2em;
+
+  }
+
+  .row-of-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 7em;
+  }
+
+  .steps {
+    margin-right: 1em;
+    flex-direction: column;
+    font-size: 1.5em;
+    position: absolute;
+    left: 1.5em;
+  }
+
+  .steps-number {
+    font-size: 2.5em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
