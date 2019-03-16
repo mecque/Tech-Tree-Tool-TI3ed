@@ -35,17 +35,11 @@ body {
 
 .card-board {
   display: flex;
-  flex-direction: column;
-}
-
-.row-of-cards {
-  display: flex;
 }
 
 .steps {
   display: flex;
   font-weight: 300;
-  width: 4.5em;
   text-align: center;
   color: rgba(235, 235, 255, 0.4);
 }
@@ -61,16 +55,13 @@ body {
   transition: box-shadow .2s ease-out;
   width: 14em;
   height: 21em;
-  margin: 0 0.5em 1.5em 0;
   padding: 1.5em;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.card:hover {
-  box-shadow: 0 0 30px 5px rgba(30, 50, 70, 0.5);
-}
+.card:hover {box-shadow: 0 0 30px 5px rgba(30, 50, 70, 0.5);}
 
 .card-title {
   font-weight: 600;
@@ -84,54 +75,76 @@ body {
   font-size: 0.9em;
 }
 
-.red::before, .blue::before, .green::before, .yellow::before {
+.card-parameters {
+  display: flex;
+  flex-direction: row;
+}
+
+.dot {
   height: 1em;
   width: 1em;
   border-radius: 50%;
   display: block;
   content: ' ';
-  margin: 0 auto 15px auto;
+  margin: 0 auto 1.5em auto;
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow, background-color 0.5s linear;
 }
 
-.red::before {
+.red {
     background-color: rgba(250, 50, 50, 0.4);
     border: rgba(250, 50, 50, 0.5) solid 1.5px;
 }
 
-.blue::before {
+.blue {
     background-color: rgba(50, 130, 250, 0.4);
     border: rgba(50, 130, 250, 0.5) solid 1.5px;
 }
 
-.green::before {
+.green {
     background-color: rgba(50, 250, 90, 0.4);
     border: rgba(50, 250, 90, 0.5) solid 1.5px;
 }
 
-.yellow::before {
+.yellow {
     background-color: rgba(250, 200, 50, 0.4);
     border: rgba(250, 200, 50, 0.5) solid 1.5px;
 }
 
-.card:hover .red::before {
+.card:hover .red {
   box-shadow: 0 0 30px 5px rgba(250, 50, 50, 0.5);
   background-color: rgba(250, 50, 50, 0.6);
 }
 
-.card:hover .blue::before {
+.card:hover .blue {
   box-shadow: 0 0 30px 5px rgba(50, 130, 250, 0.5);
   background-color: rgba(50, 130, 250, 0.6);
 }
 
-.card:hover .green::before {
+.card:hover .green {
   box-shadow: 0 0 30px 5px rgba(50, 250, 90, 0.5);
   background-color: rgba(50, 250, 90, 0.6);
 }
 
-.card:hover .yellow::before {
+.card:hover .yellow {
   box-shadow: 0 0 30px 5px rgba(250, 200, 50, 0.5);
   background-color: rgba(250, 200, 50, 0.6);
+}
+
+.add, .check {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  width: 3.5em;
+}
+
+.add {text-align: start;}
+
+.check {text-align: end;}
+
+.card:hover .add, .card:hover .check {
+  /*visibility: visible;*/
+  opacity: 1;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -141,23 +154,23 @@ body {
     text-align: center;
   }
 
-  #page-title {
-    font-size: 2em;
-  }
+  section {padding: 1.5em;}
+
+  #page-title {font-size: 2em;}
 
   #page-subtitle {
     line-height: 1.38em;
     font-size: 0.88em;
   }
 
-  .card-board, section {
+  .card-board {
+    flex-direction: column;
     padding: 1.5em;
   }
 
-  .row-of-cards {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5em;
+  .card-section {
+    display: flex;
+    justify-content: center;
   }
 
   .steps {
@@ -165,54 +178,72 @@ body {
     flex-direction: row;
     font-size: 1.3em;
     align-items: baseline;
-    justify-content: space-around;
   }
 
   .steps-number {
     font-size: 2em;
+    margin-right: 0.25em;
+  }
+
+  .ghost-card {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: rgba(235, 235, 255, 0.4);
+  }
+
+  .card {
+    margin: 0 auto 1.5em auto;
   }
 
   .card:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  header {
-    margin: 2em;
-  }
+  header {margin: 2em;}
 
-  #page-title {
-    font-size: 3.5em;
-  }
+  section {padding: 2em;}
+
+  #page-title {font-size: 3.5em;}
 
   #page-subtitle {
     line-height: 1.73em;
     font-size: 1.53em;
   }
 
-  .card-board, section {
-    padding: 2em;
-
-  }
-
-  .row-of-cards {
+  .card-board {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 7em;
+    padding: 2em 2em 2em 10em;
+  }
+
+  .card-section {
+    clear: both;
+    width: 100%;
   }
 
   .steps {
     margin-right: 1em;
     flex-direction: column;
     font-size: 1.5em;
-    position: absolute;
     left: 1.5em;
+    position: absolute;
+    width: 4.5em;
   }
 
-  .steps-number {
-    font-size: 2.5em;
+  .steps-number {font-size: 2.5em;}
+
+  .ghost-card {
+    height: 21em;
+    visibility: hidden;
+    width: 0px;
+  }
+
+  .card {
+    margin: 0 0.5em 1.5em 0;
   }
 }
 

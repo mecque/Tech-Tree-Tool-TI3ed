@@ -1,157 +1,284 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang='pl-PL'>
 <head>
-	<title>Technology Tree Tool for the Third Edition of Twilight Imperium</title>
-  <meta name="keywords" content="technology, tree, tool, cards, third, 3, III, twilight, imperium">
-	<meta name="author" content="Tomasz Cranek tomaszceranek+ti3_gmail.com">
-	<!--Import Roboto Font-->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600" rel="stylesheet">
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="technologytreetoolstyle.css">
+  <title>Technology Tree Tool for the Third Edition of Twilight Imperium</title>
+  <meta name='keywords' content='technology, tree, tool, cards, third, 3, III, twilight, imperium'>
+  <meta name='author' content='Tomasz Cranek tomaszceranek+ti3_gmail.com'>
+  <!--Import Roboto Font-->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600' rel='stylesheet'>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+  <meta charset='UTF-8'>
+  <link rel='stylesheet' type='text/css' href='technologytreetoolstyle.css'>
 </head>
 <body>
   <header>
-    <h1 id="page-title">Twilight Imperium</h1>
-    <h2 id="page-subtitle">Technology Tree Tool for the Third Edition</h2>
+    <h1 id='page-title'>Twilight Imperium</h1>
+    <h2 id='page-subtitle'>Technology Tree Tool for the Third Edition</h2>
   </header>
   <main class='card-board'>
-    <div id='ROC0' class='row-of-cards'>
-      <div class="steps">
-        <div class="steps-number">0</div>steps
-      </div>
-      <div class="card">
-        <div class="card-title red">Hylar V Laser</div>
-        <p>Cruisers and Destroyers receive +1 on all combat rolls.</p>
-      </div>
-      <div class="card">
-        <div class="card-title blue">Antimass Deflectors</div>
-        <p>All of your ships may now move through Asteroid Fields but not stop in one.</p>
-      </div>
-      <div class="card">
-        <div class="card-title yellow">Enviro Compensator</div>
-        <p>+1 production capacity of your Space Docks.</p>
+    <div class='card-section' style='display: none'>
+      <div class='steps'>
+        <div class='steps-number'>#</div>collected
       </div>
     </div>
-    <div id='ROC1' class='row-of-cards'>
-      <div class="steps">
-        <div class="steps-number">1</div>step
-      </div>
-      <div class="card">
-        <div class="card-title red">Deep Space Cannon</div>
-        <p>Enemy fleets in adjacent systems are now in range of your PDS units.</p>
-      </div>
-      <div class="card">
-        <div class="card-title blue">XRD Transporters</div>
-        <p>Carriers receive +1 movement.</p>
-      </div>
-      <div class="card">
-        <div class="card-title green">Cybernetics</div>
-        <p>Fighters receive +1 on all combat rolls.</p>
-      </div>
-      <div class="card">
-        <div class="card-title green">Stasis Capsules</div>
-        <p>Your Cruisers and Dreadnougths may now carry one Ground Force.</p>
-      </div>
-      <div class="card">
-        <div class="card-title yellow">Sarween Tools</div>
-        <p>Whenewer you produce units at any Space Dock, you now receive +1 resource with which to build units.</p>
+    <div class='ghost-card' style='display: none'>&#216;</div>  
+    <div class='card-section'>
+      <div class='steps'>
+        <div class='steps-number'>0</div>step
       </div>
     </div>
-    <div id='ROC2' class='row-of-cards'>
-      <div class="steps">
-        <div class="steps-number">2</div>steps
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title red">Magen Defense Grid</div>
-        <p>PDS receive +1 on all combat rolls. Defending Ground Forces on a planet with a PDS receive +1 on all combat rolls during Ivasion Combat.</p>
+      <div class='card-title'>Hylar V Laser</div>
+      <p>Cruisers and Destroyers receive +1 on all combat rolls.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title green">Gen Synthesis</div>
-        <p>Ground Forces receive +1 on all combat rolls during Invasion Combat. When one of your Ground Forces is destroyed roll 5+ to return to home system instead.</p>
+      <div class='card-title'>Antimass Deflectors</div>
+      <p>All of your ships may now move through Asteroid Fields but not stop in one.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title green">Neutral Motivator</div>
-        <p>You draw one extra Action Card during each Status Phase.</p>
-      </div>
-      <div class="card">
-        <div class="card-title yellow">Micro Technology</div>
-        <p>When you receive Trade Goods from your trade agreements, you now receive +1 Trade Good for each o your active trade agreements.</p>
-      </div>
-      <div class="card">
-        <div class="card-title yellow">Graviton Laser System</div>
-        <p>PDS units get one single re-roll for each missed combat roll.</p>
+      <div class='card-title'>Enviro Compensator</div>
+      <p>+1 production capacity of your Space Docks.</p>
+    </div>
+    <div class='card-section'>
+      <div class='steps'>
+        <div class='steps-number'>1</div>step
       </div>
     </div>
-    <div id='ROC3' class='row-of-cards'>
-      <div class="steps">
-        <div class="steps-number">3</div>steps
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title green">Dacxive Animators</div>
-        <p>If you win an Invasion Combat roll once for every Ground Forces killed (yours and your opponent's). For every roll of 6+, place 1 Groud Forces on the planet from your reinforcements.</p>
+      <div class='card-title'>Deep Space Cannon</div>
+      <p>Enemy fleets in adjacent systems are now in range of your PDS units.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>XRD Transporters</div>
+      <p>Carriers receive +1 movement.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Cybernetics</div>
+      <p>Fighters receive +1 on all combat rolls.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Stasis Capsules</div>
+      <p>Your Cruisers and Dreadnougths may now carry one Ground Force.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Sarween Tools</div>
+      <p>Whenewer you produce units at any Space Dock, you now receive +1 resource with which to build units.</p>
+    </div>
+    <div class='card-section'>
+      <div class='steps'>
+        <div class='steps-number'>2</div>step
       </div>
     </div>
-    <div id='ROC4' class='row-of-cards'>
-      <div class="steps">
-        <div class="steps-number">4</div>steps
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title red">War Sun</div>
-        <p>You are now allowed to produce War Sun units.</p>
+      <div class='card-title'>Magen Defense Grid</div>
+      <p>PDS receive +1 on all combat rolls. Defending Ground Forces on a planet with a PDS receive +1 on all combat rolls during Ivasion Combat.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title red">Assault Cannons</div>
-        <p>Dreadnougths get one free shot before any Space Battle.</p>
+      <div class='card-title'>Gen Synthesis</div>
+      <p>Ground Forces receive +1 on all combat rolls during Invasion Combat. When one of your Ground Forces is destroyed roll 5+ to return to home system instead.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title red">Graviton Negator</div>
-        <p>Dreadnougths may bombard planets that contain PDS. Fighters may participate in Invasion Combat (return to space after combat).</p>
+      <div class='card-title'>Neutral Motivator</div>
+      <p>You draw one extra Action Card during each Status Phase.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title yellow">Transit Diodes</div>
-        <p>As an action, you may spend 1 Command Counter form your Strategic Allocation to immediately move up to 4 Ground Forces from any one to any other planet you control.</p>
+      <div class='card-title'>Micro Technology</div>
+      <p>When you receive Trade Goods from your trade agreements, you now receive +1 Trade Good for each o your active trade agreements.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Graviton Laser System</div>
+      <p>PDS units get one single re-roll for each missed combat roll.</p>
+    </div>
+    <div class='card-section'>
+      <div class='steps'>
+        <div class='steps-number'>3</div>step
       </div>
     </div>
-    <div id='ROC5' class='row-of-cards'>
-      <div class="steps">
-        <div class="steps-number">5</div>steps
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title blue">Type IV Drive</div>
-        <p>Cruisers and Dreadnougths receive +1 movement.</p>
-      </div>
-      <div class="card">
-        <div class="card-title blue">Fleet Logistics</div>
-        <p>When taking a Tactical Action, you may now take two Tactical Actions, one after the other, before your turn ends.</p>
-      </div>
-      <div class="card">
-        <div class="card-title blue">Light Wave Deflectors</div>
-        <p>Your ships may move through systems containg enemy ships and continiue their movement to the activated system</p>
-      </div>
-      <div class="card">
-        <div class="card-title green">X-89 Bacterial Weapon</div>
-        <p>Your Dreadnougths or War Suns units may now immediately destroy all enemy Ground Forces on the planet. Then discard all your Action Cards.</p>
-      </div>
-      <div class="card">
-        <div class="card-title yellow">Integrated Economy</div>
-        <p>When producing units place them in any activated, adjacent system that is empty or friendly. You may place PDS anf Ground Forces on any friendly planet within this range.</p>
+      <div class='card-title'>Dacxive Animators</div>
+      <p>If you win an Invasion Combat roll once for every Ground Forces killed (yours and your opponent's). For every roll of 6+, place 1 Groud Forces on the planet from your reinforcements.</p>
+    </div>
+    <div class='card-section'>
+      <div class='steps'>
+        <div class='steps-number'>4</div>step
       </div>
     </div>
-    <div id='ROC6' class='row-of-cards'>
-      <div class="steps">
-        <div class="steps-number">6</div>steps
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
-      <div class="card">
-        <div class="card-title blue">Advanced Fighters</div>
-        <p>Your Fighters may move independently with movement rate of 2 and receive +1 on all combat rolls. Excess Fighters will count towards your Fleet Supply limit.</p>
+      <div class='card-title'>War Sun</div>
+      <p>You are now allowed to produce War Sun units.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
       </div>
+      <div class='card-title'>Assault Cannons</div>
+      <p>Dreadnougths get one free shot before any Space Battle.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Graviton Negator</div>
+      <p>Dreadnougths may bombard planets that contain PDS. Fighters may participate in Invasion Combat (return to space after combat).</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Transit Diodes</div>
+      <p>As an action, you may spend 1 Command Counter form your Strategic Allocation to immediately move up to 4 Ground Forces from any one to any other planet you control.</p>
+    </div>
+    <div class='card-section'>
+      <div class='steps'>
+        <div class='steps-number'>5</div>step
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Type IV Drive</div>
+      <p>Cruisers and Dreadnougths receive +1 movement.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Fleet Logistics</div>
+      <p>When taking a Tactical Action, you may now take two Tactical Actions, one after the other, before your turn ends.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Light Wave Deflectors</div>
+      <p>Your ships may move through systems containg enemy ships and continiue their movement to the activated system</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>X-89 Bacterial Weapon</div>
+      <p>Your Dreadnougths or War Suns units may now immediately destroy all enemy Ground Forces on the planet. Then discard all your Action Cards.</p>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Integrated Economy</div>
+      <p>When producing units place them in any activated, adjacent system that is empty or friendly. You may place PDS anf Ground Forces on any friendly planet within this range.</p>
+    </div>
+    <div class='card-section'>
+      <div class='steps'>
+        <div class='steps-number'>6</div>step
+      </div>
+    </div>
+    <div class='card'>
+      <div class='card-parameters'>
+        <div class='add'>ADD</div>
+        <div class='dot red'></div>
+        <div class='check'>CHECK</div>
+      </div>
+      <div class='card-title'>Advanced Fighters</div>
+      <p>Your Fighters may move independently with movement rate of 2 and receive +1 on all combat rolls. Excess Fighters will count towards your Fleet Supply limit.</p>
     </div>
   </main>
   <section>
     <p>Changelog</p>
     <p>08/03/2019: Just technology tree with described and ordered cards.</p>
+    <p>16/03/2019: New HTML tree structure and preparation of new functionalities.</p>
   </section>
   <footer>
     <section>
